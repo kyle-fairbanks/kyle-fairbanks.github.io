@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyle J. Fairbanks – Mechanical Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ──────────────────────────────────────────── -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <span class="nav-name">Kyle J. Fairbanks</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capstone">UAV Capstone</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="Engineering Resume.pdf" target="_blank" class="nav-resume">Resume ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ──────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Kyle J. Fairbanks</h1>
+      <p class="header-degree">B.S. Mechanical Engineering &nbsp;·&nbsp; Aerospace Minor &nbsp;·&nbsp; University of Arizona &nbsp;·&nbsp; May 2026</p>
+      <div class="contact-row">
+        <a href="mailto:kyle.j.fairbanks@gmail.com">kyle.j.fairbanks@gmail.com</a>
+        <span class="divider">|</span>
+        <a href="tel:4808263034">480-826-3034</a>
+        <span class="divider">|</span>
+        <span>Scottsdale, AZ</span>
+      </div>
+      <a href="Engineering Resume.pdf" target="_blank" class="btn-primary print-hide">Download Resume</a>
+      <p class="print-show resume-url">Resume: included as separate attachment</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── ABOUT ───────────────────────────────────────────────── -->
+    <section id="about" class="section section-white">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="about-text">
+          I am a mechanical engineering student at the University of Arizona with a focus on structural and fixture
+          design, composites, and analysis-driven design and manufacturing. My senior capstone is a university-led,
+          AFOSR-funded research UAV program where I own the wing structural design and material selection end-to-end, from a custom 
+          Python FEA tool to composites layups to SolidWorks CAD and iterative 3D-printed hardware and fixturing.
+          Prior to my capstone, I spent over a year as a Quality Engineering Intern at ASSA ABLOY, where I
+          pivoted into design work, building a Python/Flask control system, designing a production-ready
+          mounting bracket in SolidWorks, and delivering a multi-door automated test rig. I care about
+          doing the analysis correctly before selecting and consuming material, making things that actually work, and
+          leaving behind documentation that someone else can pick up and run with.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CAPSTONE ─────────────────────────────────────────────── -->
+    <section id="capstone" class="section section-alt">
+      <div class="container">
+        <div class="section-label">Senior Design Capstone · University of Arizona Flight Research Lab · AFOSR-Funded</div>
+        <h2 class="section-title">Dynamically Scaled Flight and Wind Tunnel Model of a Modular UAV for Scientific Flight Experiments</h2>
+        <p class="section-intro">
+          A research UAV program funded by the Air Force Office of Scientific Research (AFOSR), designed to
+          dynamically scale an existing high cost, highly modular UAV for use in proving fidelity of flight for base model UAV use in flight research. 
+          My formal title is Materials Lead, but in practice I took on nearly the full structural design of the UAV,
+          writing the analysis code, selecting materials, manufacturing the wing, and delivering a flight-ready
+          structure.
+        </p>
+
+        <!-- Overview image -->
+        <div class="feature-image">
+          <img src="assets/images/uav_assembly_overview1.jpg"
+               alt="Scaled research UAV on lab floor with LEFT and RIGHT labeled foam sandwich wings attached, base UAV visible in background"
+               class="lightbox-trigger"
+               data-caption="Scaled research UAV during integrated status review. Carbon fiber sandwich wings labeled LEFT and RIGHT, carbon fiber tube fuselage, and 3D-printed hardware throughout. Base UAV in background for scale and reference. Nearly fully manufactured with certain parts and systems still in progress." />
+          <p class="img-caption">Fully assembled UAV body for integrated status review, with base UAV in background for reference. Nearly fully manufactured, with certain parts/systems still in need of work. Complete UAV exterior visible.</p>
+        </div>
+
+        <!-- Wing Structure -->
+        <div class="subsection">
+          <h3>Wing Structure &amp; Materials</h3>
+          <p>
+            The wing was designed to carry a <strong>5G design load</strong> for a <strong>2.87 kg UAV</strong> at a <strong>target wing mass of
+            80 g</strong> over a <strong>1.38 m full wingspan</strong> (0.107 m chord). The construction is a
+            foam sandwich with selective reinforcement, with all unnecessary weight eliminated.
+          </p>
+          <ul class="detail-list">
+            <li><strong>Core:</strong> ROHACELL 31 IG-F closed-cell PMI foam: extremely low density, good compressive strength, rigid, and compatible with epoxy systems.</li>
+            <li><strong>Inner/Outer Skin reinforcement:</strong> Hexcel +/-45° Biaxial FCIM255 carbon fiber fabric bonded to the foam faces. Provides bending stiffness and torsional resistance. Bonded over the foam in a sandwich structure, creates a rigid panel.</li>
+            <li><strong>Spars:</strong> UD pultruded carbon fiber rods running the full span, embedded in the skin. The geometry was sized analytically to meet bending stiffness and failure margins to two skin spars per half of the wing (upper/lower) with a cross-section of 3x3 mm each.</li>
+            <li><strong>Ribs and Other Structures/Fixtures:</strong> 3D-printed Nylon PA-612 CF15: selected for its strength-to-weight ratio. Designed for printability (wall thickness, bridging, support-free geometry) with tight dimensional tolerances for the spar rod seats and skin bond interfaces. Iterative print setting tuning was performed until they consistently yielded ideal parts.</li>
+          </ul>
+          <div class="gallery grid-2-wide">
+            <figure>
+              <img src="assets\images\Motor_Mounts.JPG"
+                   alt="3D-printed Nylon PA-612 CF15 EDF motor mounts, clamp-ring design with bolt closure, sitting on lab table"
+                   class="lightbox-trigger"
+                   data-caption="Nylon PA-612 CF15 EDF motor mounts printed for CW and CCW engines. The clamp-ring design with bolt closure is toleranced to a snug fit on the engine body with the rigidity needed to handle thrust and torque loads." />
+              <figcaption>3D-printed Nylon PA-612 CF15 EDF mounts for CW and CCW UAV engines</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/wing_ribs.jpg"
+                   alt="Two 3D-printed Nylon PA-612 CF15 wing ribs with airfoil profile cross-section and connecting tube spar pockets"
+                   class="lightbox-trigger"
+                   data-caption="Nylon PA-612 CF15 wing ribs. The airfoil cross-section profile locates the connecting tube spar rod. Toleranced tightly for the spar rod seats and skin bond faces, and designed from the start for ease of printability." />
+              <figcaption>3D-printed Nylon PA-612 CF15 wing mounting ribs, toleranced to perfectly match the contours of the wing box mounting structure</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/wing_plates.jpg"
+                   alt="Two long Nylon PA-612 CF15 span plates with openwork hole pattern running full length, on lab table"
+                   class="lightbox-trigger"
+                   data-caption="Nylon PA-612 CF15 span plates with openwork hole pattern. Hole geometry patterns along the length to allow for modularity while maintaining the required stiffness for landing gear attachment and the wing assembly. Printed flat with no warping." />
+              <figcaption>Nylon PA-612 CF15 plates, printed without warping with the hole patterns required for landing gear and wing location modularity</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/rib_cad_iso.png"
+                   alt="SolidWorks isometric view of the wing rib showing airfoil profile, circular connecting rod seat, and wingbox matching faces"
+                   class="lightbox-trigger"
+                   data-caption="SolidWorks model of the wing rib. The circular spar rod seat, rectangular wire cutout, and wingbox matching faces are all visible. Designed for printing with tight tolerances on all mating surfaces, critical to its function." />
+              <figcaption>SolidWorks rib model: airfoil profile, connecting tube seat, and wingbox matching faces</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Python Analysis Tool -->
+        <div class="subsection">
+          <h3>Structural Analysis: Custom Python FEA Code</h3>
+          <p>
+            Wrote a dedicated structural FEA tool (<code>Wing.py</code>) prior to CAD development and used
+            it to optimize wing geometry, select materials, and validate load margins for the highest strength at the lowest weight possible. This was
+            an engineering-grade analytical framework that was validated and used to make wing design decisions. Those decisions were confirmed by a physical wing loading test: the wing held an equivalent 5G load without failure.
+          </p>
+          <a href="https://github.com/kyle-fairbanks/wing_structural_analysis" target="_blank" class="btn-secondary print-hide">View Code on GitHub ↗</a>
+          <div class="analysis-grid">
+            <div class="analysis-card">
+              <h4>Classical Laminate Theory (CLT)</h4>
+              <p>Full ABD matrix formulation for composite skin and web panels (web panels unused in final design). Computes membrane stiffness,
+              bending stiffness, and coupling terms for each laminate in the cross-section.</p>
+            </div>
+            <div class="analysis-card">
+              <h4>Bredt-Batho Multi-Cell Torsion</h4>
+              <p>Shear flow distribution across closed-shell wing, with stiffness-weighted shear partition
+              to correctly allocate torsional load between the spar webs and skin panels.</p>
+            </div>
+            <div class="analysis-card">
+              <h4>Tsai-Wu Failure Criterion</h4>
+              <p>Composite failure check applied to every lamina in every panel, computing factors of safety
+              against first-ply failure under the 5G (14.356 kg overall, 7.178 kg per wing) design load case.</p>
+            </div>
+            <div class="analysis-card"> 
+              <h4>Sandwich Wrinkling &amp; Web Buckling</h4>
+              <p>Face-sheet wrinkling (Hoff-Mautner) and shear web buckling checks (shear webs unused in final design) include failure modes that
+              classical beam theory misses entirely for a sandwich construction.</p>
+            </div>
+            <div class="analysis-card">
+              <h4>Parametric Sweep and Geometric/Material Property Study</h4>
+              <p>Automated varying sweep over parameterized width, height, number of plies, material properties, and more to generate mass-vs-margin trade
+              curves, driving the basis for the final geometry and material selection decisions.</p>
+            </div>
+            <div class="analysis-card">
+              <h4>Full Documentation</h4>
+              <p>The tool shipped with a README, User Manual, Technical Reference, Validation, and
+              Validation Results for use by any engineer who might employ this code for design decisions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Composites Manufacturing -->
+        <div class="subsection">
+          <h3>Composites Manufacturing</h3>
+          <p>
+            Performed the composites manufacturing by hand with two other team members. Hand-layup of carbon fiber fabric over the foam
+            cores, insetting the spars into the foam, epoxy wet-out, vacuum bagging, and cure, followed by bonding and post-processing were entirely performed by us three students.
+            This required process planning for a one-shot assembly where rework is not an option due to timeline constraints.
+          </p>
+          <div class="gallery grid-2-wide">
+            <figure>
+              <img src="assets/images/wing_vacuum_bag1.jpg"
+                   alt="Both halves of one wing under vacuum bag on composites table, vacuum port and green breather cloth visible"
+                   class="lightbox-trigger"
+                   data-caption="Both halves of one wing panel under vacuum bag during cure. Green breather cloth and yellow sealant tape seal the bag around the full perimeter. The vacuum port pulls the bag tight and applies pressure across the full span to wet out excess epoxy from layup while the epoxy cures." />
+              <figcaption>Wing panels under vacuum bag, both halves of one wing during post-layup cure.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/composites_action1.jpg"
+                   alt="Engineer wearing half-face respirator, safety glasses, and nitrile gloves bonding a carbon fiber tail component"
+                   class="lightbox-trigger"
+                   data-caption="Prepping the horizontal tail for bonding to the vertical stabilizer. Half-face respirator, safety glasses, and nitrile gloves are required PPE for carbon fiber and epoxy work." />
+              <figcaption>Prepping for bonding the horizontal tail to the vertical stabilizer during composites manufacturing</figcaption>
+            </figure>
+          </div>
+          <div class="gallery grid-1">
+            <figure class="wide-fig">
+              <img src="assets/images/wing_cf_panels1.jpg"
+                   alt="Top and bottom carbon fiber wing skin panels sitting in blue molds, bottom panel showing servo installed and bonding prep with plastic bonder"
+                   class="lightbox-trigger"
+                   style="height: auto; max-height: 400px; object-fit: contain; background: #f4f5f7;"
+                   data-caption="Top and bottom wing skin panels after cure, sitting in their layup molds. The bottom panel has the servo installed and the plastic bonder and microballoon fillet applied along the edges, ready to be bonded together with the top panel and the ribs." />
+              <figcaption>Completed top and bottom wing panels after cure, prepped for bonding between each other and the ribs using plastic bonder and microballoons</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- 3D Printing -->
+        <div class="subsection">
+          <h3>3D Printing: Design for Manufacture in Nylon CF</h3>
+          <p>
+            The ribs, fixtures, and select hardware were 3D printed in Nylon PA-612 CF15 on a Prusa Core One.
+            Getting Nylon CF to print reliably with tight tolerances and optimal strength required iteration over varying combinations of temperatures,
+            print speeds, wall counts, support geometry, flow rates, part geometries, and more. Not all prints succeeded, but the failures
+            informed the final process parameters and design rules, allowing perfect settings to be reached through an iterative design process.
+          </p>
+          <div class="gallery grid-3">
+            <figure>
+              <img src="assets/images/printing_ribs1.jpg"
+                   alt="Close-up of Prusa Core One extruder mid-print with Nylon PA-612 CF15 wing ribs on the bed"
+                   class="lightbox-trigger"
+                   data-caption="Prusa Core One mid-print running wing mounting ribs in Nylon PA-612 CF15. Close-up of the extruder assembly and the enclosed print environment required for reliable Nylon CF bed adhesion and layer bonding." />
+              <figcaption>Prusa Core One printing wing mounting ribs out of Nylon PA-612 CF15</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/printed_brackets1.jpg"
+                   alt="Three finished Nylon PA-612 CF15 tail mount parts on a workbench, two shafts and one multi-hole connector, as-printed"
+                   class="lightbox-trigger"
+                   data-caption="Finished Nylon PA-612 CF15 tail mount hardware, as-printed with no post-processing outside support removal. Two shafts and a multi-hole connector, all as-designed with no post-machining required." />
+              <figcaption>Finished Nylon PA-612 CF15 tail mounts, as-printed, no post-processing outside support removal</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/print_failure.jpg"
+                   alt="Catastrophic Nylon CF print failure with tangled filament spaghetti covering the entire Prusa print bed"
+                   class="lightbox-trigger"
+                   data-caption="Catastrophic adhesion failure during Nylon CF development. Failures like this one led to revised bed prep, enclosure temperature management, and first-layer parameter tuning that produced the final reliable process." />
+              <figcaption>Catastrophic failure during Nylon CF development, one example of many that led to iterative process improvements</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Assembly -->
+        <div class="subsection">
+          <h3>Integration &amp; Assembly</h3>
+          <div class="gallery grid-2-wide">
+            <figure>
+              <img src="assets/images/uav_wing_assembly.jpg"
+                   alt="Two team members assembling the UAV wing on a cluttered lab bench, carbon fiber tube spar running full span with RIGHT label in blue tape"
+                   class="lightbox-trigger"
+                   data-caption="Wing integration session on the lab bench. Carbon fiber rods run the full wingspan with ribs, carbon fiber connecting tube, servo hardware, and modular attachment hardware going in together. The RIGHT label in blue tape marks the starboard wing during assembly." />
+              <figcaption>Wing integration session: spar, ribs, servo hardware, and modular attachment hardware going in together</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/rib_in_assembly.png"
+                   alt="Wing rib installed in the assembly with modular hub connector seated in the spar rod pocket and CF tube spar running through it"
+                   class="lightbox-trigger"
+                   data-caption="Rib installed in the wing with the connecting CF tube installed in the AlSi10Mg alloy 3D printed variable sweep angle wingbox. The rib locates and supports the wing during compression from lift on either side by mating perfectly with the outside of the wingbox and preventing local deformation at the root. The wingbox is the modularity interface that both anchors the wing to the UAV and allows the wing to detach and reconfigure sweep angles." />
+              <figcaption>Rib installed with variable sweep angle wingbox and CF connecting tube</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── INTERNSHIP ──────────────────────────────────────────── -->
+    <section id="internship" class="section section-white">
+      <div class="container">
+        <div class="section-label">Professional Experience · May 2024 – Present</div>
+        <h2 class="section-title">ASSA ABLOY: Quality Engineering Intern</h2>
+        <p class="section-intro">
+          ASSA ABLOY is one of the world's largest access solutions companies. I joined as a QE intern
+          supporting electro-mechanical product lines, but my role expanded well into design and development.
+          Three projects defined the internship.
+        </p>
+
+        <div class="project-blocks">
+
+          <!-- SecBox Bracket -->
+          <div class="project-block">
+            <div class="project-block-text">
+              <h3>Press-Fit Control ID Mounting Bracket</h3>
+              <div class="project-tag">SolidWorks · Product Design · Product Release</div>
+              <p>
+                No existing mounting solution worked for a Control ID access control hub in its intended installation
+                context, so I designed one from scratch in SolidWorks to be 3D-printable. The bracket is press-fit, so no tools required and
+                no fasteners to lose. It allows the product to be pressed into the bracket and pulled out cleanly and with little effort and no damage to the mount or the device, making it immediately practical
+                for installers in the field.
+              </p>
+              <p>
+                The design was shaped around three real constraints the team needed solved: clean wire routing
+                clearance so installers weren't fighting the harness, a quick-swap form factor so the unit
+                could be pulled and replaced without disassembly, and geometry and wire routing directionality that helped the product achieve
+                UL compliance. The bracket was approved by the lead engineer and will be released as a standard part of the kit for the device at product release, as well as shipping as an accessory for the product line.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pick-to-Light -->
+          <div class="project-block project-block-reverse">
+            <div class="project-block-text">
+              <h3>Pick-to-Light Operator Guidance System</h3>
+              <div class="project-tag">Python · Flask · LabJack I/O · Git</div>
+              <p>
+                Designed and built a multi-station Pick-to-Light operator guidance and verification system using a LabJack
+                I/O module driving LEDs, lasers, and switches. The hardware directs assembly operators through
+                pick sequences in real time and confirms correct completion at each step.
+              </p>
+              <p>
+                The controlling software is a self-contained Python API application with a configuration
+                screen and test screen, so deployments require no code edits, just configuration file updates.
+                The system includes logging, error handling, and was validated with mock API and
+                hardware-in-the-loop tests. Shipped with full Git-versioned documentation: README, user guide,
+                setup checklist, and troubleshooting guide to be implemented on the production line.
+              </p>
+            </div>
+            <div class="project-block-text project-block-highlights">
+              <h4>Technical highlights</h4>
+              <ul class="detail-list">
+                <li>Python backend serving a local web UI for configuration and station monitoring</li>
+                <li>LabJack U3 I/O integration for real-time hardware control and sensor reading</li>
+                <li>Configurable station maps, no code changes needed for different line layouts</li>
+                <li>Logging system captures operator activity and error events for production records</li>
+                <li>Git-versioned, documented to production deployment standard</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Multi-Door Tester -->
+          <div class="project-block">
+            <div class="project-block-text">
+              <h3>Multi-Door Automated Cycle Tester</h3>
+              <div class="project-tag">Test Fixture Design · Hydraulic + Electronic Integration · Modular Design</div>
+              <p>
+                Delivered an automated cycling tester capable of running 12 parallel door-cycle tests within
+                the footprint of a single existing test rig. Previously, each test required its own setup;
+                this system significantly decreased the footprint of a single test and centralized the controls for all tests, improving standardization in the Test and Evaluation Lab.
+              </p>
+              <ul class="detail-list">
+                <li>Integrated hydraulic, electronic, and mechanical subsystems for automated cycling and performance monitoring</li>
+                <li>12 parallel test channels in a single-rig footprint: 12× throughput improvement</li>
+                <li>Modular design for scalability for ease of service, universal testing capability across all products, and future upgradability</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ──────────────────────────────────────────────── -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>CAD &amp; Design</h4>
+            <ul>
+              <li>SolidWorks (parts, assemblies, drawings)</li>
+              <li>AutoCAD</li>
+              <li>Design for additive manufacturing (DFAM)</li>
+              <li>Tolerance analysis &amp; fit/clearance design</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Structural Analysis</h4>
+            <ul>
+              <li>Classical Laminate Theory, ABD matrix</li>
+              <li>Bredt-Batho multi-cell torsion</li>
+              <li>Tsai-Wu composite failure criterion</li>
+              <li>Sandwich panel wrinkling &amp; shear web buckling</li>
+              <li>SolidWorks Simulation (FEA)</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Manufacturing</h4>
+            <ul>
+              <li>Composites fabrication (hand layup, vacuum bagging)</li>
+              <li>FDM 3D printing, engineering-grade filaments (Nylon PA-612 CF, PC-CF, PETG, ASA, TPU, PLA)</li>
+              <li>Process development for high-performance polymers</li>
+              <li>Basic shop fabrication &amp; hand tools</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Software &amp; Programming</h4>
+            <ul>
+              <li>Python (analysis scripts, automation, data processing)</li>
+              <li>Web application backend</li>
+              <li>LabJack/Directional I/O switch integration</li>
+              <li>Git &amp; version control</li>
+              <li>Technical documentation (README, user guides, technical documentation, Validation)</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Test &amp; Integration</h4>
+            <ul>
+              <li>Test fixture design and build</li>
+              <li>Durability &amp; cycle testing</li>
+              <li>Environmental exposure fixture design (salt fog, sealing)</li>
+              <li>Electro-mechanical system integration</li>
+              <li>Hardware-in-the-loop validation</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Other</h4>
+            <ul>
+              <li>Materials selection (composites, metals, structural polymers)</li>
+              <li>Procurement and supplier sourcing</li>
+              <li>Eagle Scout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Kyle J. Fairbanks &nbsp;·&nbsp; <a href="mailto:kyle.j.fairbanks@gmail.com">kyle.j.fairbanks@gmail.com</a> &nbsp;·&nbsp; 480-826-3034</p>
+      <p class="footer-degree">B.S. Mechanical Engineering · Aerospace Minor · University of Arizona · May 2026</p>
+    </div>
+  </footer>
+
+  <!-- ── LIGHTBOX ───────────────────────────────────────────── -->
+  <div id="lightbox" class="lightbox print-hide" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-inner">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
