@@ -454,6 +454,10 @@ code {
   max-width: none;
 }
 
+.project-block > .gallery {
+  grid-column: 1 / -1;
+}
+
 .project-block-image figure { margin: 0; }
 
 .project-block-image img {
