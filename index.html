@@ -56,18 +56,21 @@
       <div class="container">
         <h2 class="section-title">About</h2>
         <p class="about-text">
-          Mechanical Engineer with hands-on quality engineering experience supporting electromechanical manufacturing,
-          troubleshooting production issues, developing test systems and fixtures, and validating products. I currently
-          work as a Quality Engineer at ASSA ABLOY, where I support production through finished-goods audits,
-          first-article inspections, electrical and mechanical testing, manufacturing troubleshooting, DMR investigation,
-          and root cause and corrective action. My background also includes SolidWorks design, additive manufacturing,
-          electromechanical test equipment, automation, composites, and structural analysis.
+          I'm a mechanical engineer focused on product development, prototyping, testing, and solving physical hardware
+          problems. I joined ASSA ABLOY as a Quality Engineering Intern in 2024 and converted to a full-time Quality
+          Engineer after graduating in 2026. That experience has given me direct exposure to how electromechanical
+          products behave in production and in the field, and how design, manufacturing, and process decisions show up
+          in real failures.
         </p>
         <p class="about-text" style="margin-top: 16px;">
-          During my ASSA ABLOY internship, I developed manufacturing-focused hardware and test systems including
-          mounting brackets, an operator-guidance and verification system, and a multi-door automated cycle tester.
-          My engineering work spans mechanical design, electrical troubleshooting, hardware integration, prototyping,
-          validation, and hands-on fabrication.
+          My strongest work has come from taking open-ended problems and working toward creative, practical solutions.
+          Across my work at ASSA ABLOY and my capstone, that has included SolidWorks design, automated test equipment,
+          structural analysis, and in-depth product investigations.
+        </p>
+        <p class="about-text" style="margin-top: 16px;">
+          My broader engineering background includes additive manufacturing, composite structures, Python-based
+          engineering tools, electromechanical integration, and hands-on fabrication. I'm most interested in product
+          development work where design, manufacturing, prototyping, and testing stay closely connected.
         </p>
       </div>
     </section>
@@ -78,9 +81,11 @@
         <div class="section-label">Senior Design Capstone · University of Arizona Flight Research Lab · AFOSR-Funded</div>
         <h2 class="section-title">Dynamically Scaled Flight and Wind Tunnel Model of a Modular UAV for Scientific Flight Experiments</h2>
         <p class="section-intro">
-          A research UAV program funded by the Air Force Office of Scientific Research (AFOSR), designed to
-          dynamically scale an existing high cost, highly modular UAV for use in proving fidelity of flight for base model UAV use in flight research. 
-          My formal title is Materials Lead, but in practice I took on nearly the full structural design of the UAV,
+          A research UAV program funded by the Air Force Office of Scientific Research (AFOSR), focused on
+          dynamically scaling an existing high-cost flight research UAV to serve as a lower-risk surrogate for
+          evaluating the expected flight dynamics and safety of the full-scale platform before committing it to
+          flight testing.
+          My formal title was Materials Lead, but in practice I took on nearly the full structural design of the UAV,
           writing the analysis code, selecting materials, manufacturing the wing, and delivering a flight-ready
           structure.
         </p>
@@ -144,9 +149,12 @@
         <div class="subsection">
           <h3>Structural Analysis: Custom Python FEA Code</h3>
           <p>
-            Wrote a dedicated structural FEA tool (<code>Wing.py</code>) prior to CAD development and used
-            it to optimize wing geometry, select materials, and validate load margins for the highest strength at the lowest weight possible. This was
-            an engineering-grade analytical framework that was validated and used to make wing design decisions. Those decisions were confirmed by a physical wing loading test: the wing held an equivalent 5G load without failure.
+            Wrote a dedicated structural analysis tool (<code>Wing.py</code>) that reconstructs the full wing geometry
+            computationally without requiring a CAD model. The framework was used to calculate structural response,
+            evaluate failure margins, and guide wing design decisions. Those decisions were validated with a physical
+            loading test in which the wing sustained an equivalent 5G load without failure. During early flight
+            testing, Dutch roll instability caused the UAV to land hard on a wing tip rather than the landing
+            gear, providing an additional unplanned structural check; the wing remained undamaged.
           </p>
           <a href="https://github.com/kyle-fairbanks/wing_structural_analysis" target="_blank" class="btn-secondary print-hide">View Code on GitHub ↗</a>
           <div class="analysis-grid">
@@ -225,7 +233,7 @@
           <p>
             The ribs, fixtures, and select hardware were 3D printed in Nylon PA-612 CF15 on a Prusa Core One.
             Getting Nylon CF to print reliably with tight tolerances and optimal strength required iteration over varying combinations of temperatures,
-            print speeds, wall counts, support geometry, flow rates, part geometries, and more. Not all prints succeeded, but the failures
+            print speeds, wall counts, support geometry, flow rates, part geometries, and more.             Not all prints succeeded, but the failures
             informed the final process parameters and design rules, allowing perfect settings to be reached through an iterative design process.
           </p>
           <div class="gallery grid-3">
@@ -290,16 +298,49 @@
             <li>Support production of electromechanical access-control products through finished-goods audits, first-article inspections, electrical and mechanical testing, and manufacturing troubleshooting.</li>
             <li>Work directly with production, quality, and engineering personnel to identify failure mechanisms, evaluate manufacturing issues, and support corrective actions and process improvements.</li>
             <li>Investigate product and process nonconformances through functional testing, electrical diagnostics, dimensional inspection, and comparison against engineering specifications.</li>
-            <li>Investigate DMRs and perform root cause and corrective action (RCCA) for manufacturing and product issues.</li>
+            <li>Investigate customer DMRs and product nonconformances through root cause analysis, distinguish between design, process, and component-related failure mechanisms, and support corrective actions through implementation.</li>
           </ul>
+          <div class="project-blocks">
+
+            <!-- MCL-24 Power Cable Corrective Action -->
+            <div class="project-block">
+              <div class="project-block-text">
+                <h3>Electromechanical Cable Damage RCCA</h3>
+                <div class="project-tag">Investigation · Root Cause Analysis · Design Change</div>
+                <p>
+                  Shortly after transitioning to my full-time Quality Engineer role, I independently investigated
+                  a recurring customer Discrepant Material Report (DMR) involving power-cable damage on an
+                  electromechanical product.
+                </p>
+                <p>
+                  Inspection of production units revealed inconsistent cable positioning at the housing exit and
+                  limited clearance between the power-cable jacket and a metal edge. Root cause analysis traced
+                  the variation to a potting process that did not mechanically constrain cable position during
+                  cure, allowing some assemblies to leave production with the jacket contacting an unprotected
+                  edge.
+                </p>
+                <p>
+                  The failure mode was latent: affected units could pass functional testing and inspection, while
+                  later movement during shipping, installation, or service could cause abrasion over time.
+                </p>
+                <p>
+                  Corrective action addressed both the product and the manufacturing process. A protective
+                  interface was added at the cable exit, and a fixture redesign was initiated to mechanically
+                  control cable position during casting.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <!-- Quality Engineering Intern role -->
         <div class="subsection">
           <div class="section-label">Quality Engineering Intern &nbsp;·&nbsp; June 2024 – June 2026</div>
           <p class="section-intro">
-            Joined as a Quality Engineering Intern supporting electromechanical product lines. During the internship,
-            I also completed design, automation, and test-equipment projects supporting manufacturing and engineering needs.
+            As a Quality Engineering Intern, I worked primarily in the Test and Evaluation Lab supporting
+            electromechanical product lines. Alongside the quality work, I took on mechanical design, automation,
+            and test-equipment projects supporting manufacturing and engineering needs.
           </p>
 
           <div class="project-blocks">
@@ -386,9 +427,10 @@
                   screen and test screen, so no code edits are required for different configurations—only
                   configuration file updates. The system includes logging, error handling, and was validated with
                   mock API and hardware-in-the-loop tests. Shipped with full Git-versioned documentation: README,
-                  user guide, setup checklist, and troubleshooting guide. The core guidance and verification system
-                  was completed and hardware-validated. Production implementation was ultimately not pursued after
-                  external WMS/OT integration requirements expanded significantly beyond the original project scope.
+                  user guide, setup checklist, and troubleshooting guide.                   The core system was completed and hardware-validated. The primary barrier to implementation
+                  became the external WMS/OT interface rather than the guidance hardware or control software itself.
+                  As integration requirements expanded beyond the original project scope, the project was discontinued
+                  rather than forcing an increasingly impractical deployment architecture.
                 </p>
               </div>
               <div class="project-block-text project-block-highlights">
